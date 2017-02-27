@@ -1,7 +1,10 @@
 class ProgramsController < ApplicationController
 
+  def intro
+  end
+
   def index
-    @programs = Programs.all
+    @programs = Program.all
   end
 
   def show
@@ -25,7 +28,7 @@ class ProgramsController < ApplicationController
     @program.update(program_params)
   end
 
-  def destroy
+  def destory
     @program = Program.find(params[:id])
     @program.destroy
 

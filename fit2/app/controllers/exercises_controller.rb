@@ -5,13 +5,7 @@ class ExercisesController < ApplicationController
   end
 
   def show
-    @exercise = Exercise.find(params[:program_id])
-  end
-
-  def create
-    @program = Program.find(params[:program_id])
-    @exercise = @program.exercises.create!(exercise_params)
-    redirect_to program_path(@program)
+    @exercise = Exercise.find(params[:id])
   end
 
   def new
@@ -19,20 +13,33 @@ class ExercisesController < ApplicationController
     @exercise = @program.exercises.new
   end
 
-  def update
-    @exercise = Exercise.find(params[:id])
-    @exercise.update(exercise_params)
-  end
+  def create
+    @program = Program.find(params[:program_id])
+    @exercise = @program.exercises.create!(exercise_params)
 
-  def destroy
-    @exercise = Exercise.find(params[:id])
-    @exercise.destroy
+    redirect_to program_path(@program)
   end
 
   def edit
     @exercise = Exercise.find(params[:id])
+    @program = Program.find(params[:program_id])
+
   end
 
+  def update
+    @exercise = Exercise.find(params[:id])
+    @exercise.update(exercise_params)
+
+    redirect_to program_exercise_url
+  end
+
+  def destroy
+    @exercise = Exercise.find(params[:id])
+    @program = @exercise.program
+    @exercise.destroy
+
+    redirect_to program_path @program
+  end
 
   private
   def exercise_params

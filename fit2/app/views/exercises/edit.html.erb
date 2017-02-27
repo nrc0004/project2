@@ -1,4 +1,4 @@
-<h2>Add a exercise to your program</h2>
+<h2>Edit Exercise</h2>
 
 <%= form_for [@program, @exercise] do |f| %>
   <%= f.label :name %>
@@ -10,11 +10,11 @@
   <%= f.label :weight %>
   <%= f.text_field :weight %>
 
-  <%= f.label :sets %>
-  <%= f.text_field :sets %>
-
   <%= f.label :reps %>
   <%= f.text_field :reps %>
+
+  <%= f.label :sets %>
+  <%= f.text_field :sets %>
 
   <%= f.submit %>
 <% end %>

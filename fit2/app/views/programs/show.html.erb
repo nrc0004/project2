@@ -8,7 +8,7 @@
   <h2> Exercises </h2>
   <% @program.exercises.each do |exercise| %>
 
-  <p><%= link_to exercise.name, program_exercise_path(exercise) %><p>
+  <p><%= link_to exercise.name, program_exercise_path(@program, exercise) %><p>
 
   <% end %>
 
