@@ -9,11 +9,14 @@ class ExercisesController < ApplicationController
   end
 
   def create
-    @exercise = Exercise.create!(house_params)
+    @program = Program.find(params[:program_id])
+    @exercise = @program.exercises.create!(exercise_params)
+    redirect_to program_path(@program)
   end
 
   def new
-    @exercise = Exercise.new
+    @program = Program.find(params[:program_id])
+    @exercise = @program.exercises.new
   end
 
   def update

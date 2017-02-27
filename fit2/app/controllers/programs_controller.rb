@@ -1,7 +1,7 @@
 class ProgramsController < ApplicationController
 
   def index
-    @programs = Program.all
+    @programs = Programs.all
   end
 
   def show
@@ -9,7 +9,8 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    @program = Program.create!(house_params)
+    @program = Program.create!(program_params)
+
   end
   def new
     @program = Program.new
