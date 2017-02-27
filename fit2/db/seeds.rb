@@ -2,8 +2,8 @@ Program.destroy_all
 Exercise.destroy_all
 
 legday= Program.create( name:"Leg Day", details: "program for legs")
-armday= Program.create( name:"Leg Day", details: "program for arms")
-fullbody= Program.create( name:"Leg Day", details: "program for fullbody")
+armday= Program.create( name:"Arm Day", details: "program for arms")
+fullbody= Program.create( name:"Full Body Day", details: "program for fullbody")
 
 legday.exercises.create(name: "Deadlift", weight: 150, reps: 15, sets: 3, photo_url: "",photo_url: "", photo_url: "")
 legday.exercises.create(name: "Squats", weight: 150, reps: 15, sets:3, photo_url: "",photo_url: "", photo_url: "")

@@ -1,0 +1,8 @@
+<% @programs.each do |program| %>
+
+    <p> <a href="/programs/<%= program[:id]%>"><%=program.name %> </a>
+    </p>
+
+  <% end %>
+
+  <a href="/programs/new"> Add a new program </a>

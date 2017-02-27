@@ -1,0 +1,13 @@
+<a href="/programs">Return to Programs list</a>
+
+<h1> <%= @program.name %> </h1>
+
+  <h2> Description: </h2>
+  <p><%= @program.details %></p>
+
+  <h2> Exercises </h2>
+  <% @program.exercises.each do |exercise| %>
+
+  <p><%= link_to exercise.name, program_exercise_path(exercise) %><p>
+
+  <% end %>
