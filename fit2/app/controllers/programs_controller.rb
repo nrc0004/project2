@@ -1,5 +1,8 @@
 class ProgramsController < ApplicationController
 
+  def homepage
+  end
+
   def intro
   end
 
