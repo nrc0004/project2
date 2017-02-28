@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
     root to: 'programs#intro'
     get '/' => 'programs#intro'
     get '/loggedin' => 'programs#homepage'
@@ -7,5 +9,6 @@ Rails.application.routes.draw do
     resources :programs do
       resources :exercises
     end
+
 
 end

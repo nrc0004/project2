@@ -1,0 +1,7 @@
+<h1>View Users</h1>
+<% @profiles.each do |profile| %>
+
+    <p> <a href="/profiles/<%= profile[:id]%>"><%=profile.username %> </a>
+    </p>
+
+  <% end %>

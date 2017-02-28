@@ -2,6 +2,8 @@
 
 
 <h1> <%= @program.name %> </h1>
+<p> <%= link_to "edit", edit_program_path(@program) %> </p>
+
 <%= link_to "Delete", @program, method: :delete, class: "delete" %>
 
   <h2> Description: </h2>

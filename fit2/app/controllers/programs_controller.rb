@@ -34,6 +34,8 @@ class ProgramsController < ApplicationController
     else
       flash[:alert] = "Only the author of the post can edit the program"
     end
+      redirect_to program_path
+
   end
 
   def destroy
