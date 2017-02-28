@@ -1,6 +1,8 @@
 <a href="/programs">Return to Programs list</a>
 
+
 <h1> <%= @program.name %> </h1>
+<%= link_to "Delete", @program, method: :delete, class: "delete" %>
 
   <h2> Description: </h2>
   <p><%= @program.details %></p>

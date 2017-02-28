@@ -12,9 +12,10 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    @program = Program.create!(program_params)
-
+    @program = current_user.programs.create!(program_params)
+    redirect_to program_path(@program)
   end
+
   def new
     @program = Program.new
   end
@@ -25,12 +26,20 @@ class ProgramsController < ApplicationController
 
   def update
     @program = Program.find(params[:id])
-    @program.update(program_params)
+    if @program.user == current_user
+      @program.update(program_params)
+    else
+      flash[:alert] = "Only the author of the post can edit the program"
+    end
   end
 
-  def destory
+  def destroy
     @program = Program.find(params[:id])
-    @program.destroy
+    if @program.user == current_user
+      @program.destroy
+    else
+      flash[:alert] = "Only the author of the post can delete"
+    end
 
     redirect_to programs_path
   end

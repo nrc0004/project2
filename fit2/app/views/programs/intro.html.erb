@@ -1,1 +1,55 @@
-<h1>HI</h1>
+<% if !current_user %>
+<%= link_to "Sign up", new_user_registration_path %>
+<%= link_to "Sign in", new_user_session_path %>
+<% else %>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <%= current_user.email %>
+<% end %>
+<div class="contents">
+  <nav class= "nav1">
+    <ul>
+      <li><%= link_to "Programs", programs_path %></li>
+      <li><%= link_to "Community", users_path%> </li>
+      <li>Posts</li>
+      <li>About</li>
+    </ul>
+  </nav>
+
+  <div class="intro">
+    <div class="sign">
+
+    </div>
+    <div class="motivation">
+    </div>
+  </div>
+
+  <div class="suggestions">
+    <div class="gain">
+    </div>
+    <div class="cut">
+    </div>
+    <div class="lifestyle">
+
+    </div>
+  </div>
+
+  <div class="icons">
+
+      <div class="column1">
+        <div class="icon1">
+        </div>
+        <div class="icon2">
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="icon3">
+        </div>
+        <div class="icon4">
+        </div>
+      </div>
+
+
+  </div>
+
+</div>
