@@ -2,8 +2,8 @@
   <nav class= "nav1">
     <ul>
       <li><%= link_to "Programs", programs_path %></li>
-      <li> <%= link_to "Create my Profile", new_user_profile_path(@user, @profile) %></li>
-      <li> <%= link_to "View/Edit Profile", user_profile_path(@user, @profile) %>  </li>
+      
+      <li> <%= link_to "View/Edit Profile", edit_user_profile_path(@user, @profile) %>  </li>
       <li> Community</li>
       <li>About</li>
     </ul>
