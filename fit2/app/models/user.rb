@@ -5,4 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :programs
   has_one :profile
+
+  # after_initialize :create_profile
+  #   def create_profile
+  #     self.profile.create(username: "new user", age: "0", location: "somehwere", gender:"female", interests: "stuff")
+  #   end
+
 end

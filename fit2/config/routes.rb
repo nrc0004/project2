@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
+  
+     root to: 'programs#splash'
 
-    root to: 'programs#intro'
-    get '/' => 'programs#intro'
-    get '/loggedin' => 'programs#homepage'
-
+     get '/homepage' => 'programs#homepage'
     resources :programs do
       resources :exercises
     end
 
+    resources :users do
+      resources :profiles
+    end
 
 end

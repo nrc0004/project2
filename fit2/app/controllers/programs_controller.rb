@@ -1,12 +1,15 @@
 class ProgramsController < ApplicationController
 
-  def homepage
+  def splash
   end
 
-  def intro
+  def homepage
+    @user= current_user
+    @profile = @user.profile
   end
 
   def index
+    
     @programs = Program.all
   end
 

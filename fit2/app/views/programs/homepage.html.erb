@@ -2,15 +2,47 @@
   <nav class= "nav1">
     <ul>
       <li><%= link_to "Programs", programs_path %></li>
-      <li> My Profile </li>
-      <li>Post</li>
-      <li> Community </li>
+      <li> <%= link_to "Create my Profile", new_user_profile_path(@user, @profile) %></li>
+      <li> <%= link_to "View/Edit Profile", user_profile_path(@user, @profile) %>  </li>
+      <li> Community</li>
       <li>About</li>
     </ul>
   </nav>
 </div>
 
-<div class="banner">
+  <div class="intro">
+    <div class="sign">
+    </div>
+    <!-- <div class="motivation">
+    </div> -->
+  </div>
+
+  <div class="icons">
+
+        <div class="icon1">
+        </div>
+        <div class="icon2">
+        </div>
+
+        <div class="icon3">
+        </div>
+        <div class="icon4">
+        </div>
+  </div>
+
+
+  <div class="suggestions">
+    <div class="gain">
+    </div>
+    <div class="cut">
+    </div>
+    <div class="lifestyle">
+
+    </div>
+  </div>
+
+
+<!-- <div class="banner">
   <img class="mySlides" src="http://i63.tinypic.com/51vr6d.jpg">
   <img class="mySlides" src="http://i66.tinypic.com/1puyk6.png">
   <img class="mySlides" src="http://i68.tinypic.com/1se0dy.jpg">
@@ -18,4 +50,4 @@
 
   <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-</div>
+</div> -->

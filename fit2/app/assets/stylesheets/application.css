@@ -1,12 +1,44 @@
+
 body {
   background-color: rgb(230,230,230);
   font-family: 'Michroma', sans-serif;
+
 }
 .contents{
   display: flex;
   flex-direction: column;
   align-content: center;
+}
+.page{
+  background-image: url("http://i.imgur.com/nNRfHtU.jpg");
 
+}
+.centerpic{
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    right: 100px;
+    height: 500px;
+    margin: auto;
+    background-image: url("http://i.imgur.com/nNRfHtU.jpg");
+    background-size: cover;
+}
+
+.pass{
+  font-size: 10px;
+}
+
+.centerpic2{
+    height: 350px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    text-align: center;
 }
 
 .banner {

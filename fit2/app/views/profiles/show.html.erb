@@ -1,13 +1,12 @@
-<a href="/loggedin"> Return to Main</a>
+<%= link_to "return to main", '/homepage' %>
 
 
-<h1> <%= @profile.name %> </h1>
 
-  <h2> Username: </h2>
-  <p><%= @profile.username %></p>
+<p> username: <%= @profile.username %></p>
+<p> age: <%= @profile.age %></p>
+<p> gender: <%= @profile.gender %></p>
+<p> location: <%= @profile.location %></p>
+<p> interests: <%= @profile.interests %></p>
 
-  <h2> Location </h2>
-  <p><%= @profile.location %></p>
 
-  <h2> Interests </h2>
-  <p><%= @profile.interests %></p>
+<%= link_to "edit", edit_user_profile_path(@user, @profile) %>

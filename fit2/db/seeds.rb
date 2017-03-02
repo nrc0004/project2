@@ -1,8 +1,10 @@
 Program.destroy_all
 Exercise.destroy_all
 User.destroy_all
+Profile.destroy_all
 
-#
+
+
 # legday= Program.create!( name:"Leg Day", details: "program for legs")
 # armday= Program.create( name:"Arm Day", details: "program for arms")
 # fullbody= Program.create( name:"Full Body Day", details: "program for fullbody")
