@@ -2,7 +2,12 @@ Program.destroy_all
 Exercise.destroy_all
 User.destroy_all
 Profile.destroy_all
+#
+#
+#
+natasha = User.create!(email: "natasha@gmail.com", password: "password")
 
+Profile.create!(username: "natasha", age: 26, gender: "female", location: "Washington", interests: "exercise", user: natasha)
 
 
 # legday= Program.create!( name:"Leg Day", details: "program for legs")
