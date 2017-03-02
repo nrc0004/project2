@@ -4,7 +4,7 @@
       <li><%= link_to "Programs", programs_path %></li>
       <li> <%= link_to "Create my Profile", new_user_profile_path(@user, @profile) %></li>
       <li> <%= link_to "View/Edit Profile", user_profile_path(@user, @profile) %>  </li>
-      <li> Community</li>
+      <li> <%=link_to "Community", users_path %></li>
       <li>About</li>
     </ul>
   </nav>
@@ -12,6 +12,8 @@
 
   <div class="intro">
     <div class="sign">
+      <h2> Get Started with FIT</h2>
+      <p> /Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
     </div>
     <!-- <div class="motivation">
     </div> -->
