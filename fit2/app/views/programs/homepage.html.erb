@@ -2,19 +2,21 @@
   <nav class= "nav1">
     <ul>
       <li><%= link_to "Programs", programs_path %></li>
-      
+
       <li> <%= link_to "View/Edit Profile", edit_user_profile_path(@user, @profile) %>  </li>
-      <li> Community</li>
+      <li> <%=link_to "Community", users_path %> </li>
       <li>About</li>
     </ul>
   </nav>
 </div>
 
   <div class="intro">
+
     <div class="sign">
+      <h2>Welcome to FIT </h2>
+      <p> Welcome to FIT, an easy-to-use fitness program builder. Use this app to create programs, track exersices, and connect to other FIT members!</p>
     </div>
-    <!-- <div class="motivation">
-    </div> -->
+
   </div>
 
   <div class="icons">
@@ -33,11 +35,16 @@
 
   <div class="suggestions">
     <div class="gain">
+      <h2>Programs for gains </h2>
+      <p>/Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     </div>
     <div class="cut">
+      <h2>Programs for weight loss </h2>
+      <p>/Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     </div>
     <div class="lifestyle">
-
+      <h2>Programs for lifestyle changes </h2>
+      <p>/Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     </div>
   </div>
 

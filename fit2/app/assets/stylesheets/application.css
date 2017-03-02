@@ -80,9 +80,11 @@ ul{
 .sign {
   height: 375px;
   width: 330px;
-  background-color: white;
-  opacity: .25;
+  background-color: rgba(255,255,255, .25);
   margin: 50px 50px 50px 50px;
+  text-align: center;
+  color: white;
+
 }
 
 .motivation {
@@ -110,8 +112,10 @@ ul{
 .gain, .cut, .lifestyle {
   height: 70%;
   width: 30%;
-  background-color: black;
-  opacity: .30;
+  background-color: rgba(0,0,0,.3);
+  color: white;
+  font-size: 13px;
+  text-align: center;
 }
 
 .icons {
