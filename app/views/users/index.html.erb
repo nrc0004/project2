@@ -1,0 +1,8 @@
+<%= link_to "return to main", '/homepage' %>
+
+<h1> Connect with the Community</h1>
+<% @user.each do |user| %>
+
+    <p> <%=user.email%></p>
+
+  <% end %>

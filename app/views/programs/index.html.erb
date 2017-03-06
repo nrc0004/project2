@@ -1,0 +1,11 @@
+<%= link_to "return to main", '/homepage' %>
+
+<h1>View User Submitted Programs</h1>
+<% @programs.each do |program| %>
+
+    <p> <a href="/programs/<%= program[:id]%>"><%=program.name %> </a>
+    </p>
+
+  <% end %>
+
+  <a href="/programs/new"> Add a new program </a>

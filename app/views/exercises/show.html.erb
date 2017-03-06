@@ -1,0 +1,13 @@
+<%= link_to "return to program",  program_path%>
+
+<h1>  <%= @exercise.name %></h1>
+<img src="<%= @exercise.photo_url%>" >
+
+
+<p> weight: <%= @exercise.weight %></p>
+<p> sets: <%= @exercise.sets %></p>
+<p> reps: <%= @exercise.reps %></p>
+
+<%= link_to "edit", edit_program_exercise_path(@exercise) %>
+
+<%= link_to "Delete", @program, method: :delete, class: "delete" %>

@@ -1,0 +1,20 @@
+<h2>Add a exercise to your program</h2>
+
+<%= form_for [@program, @exercise] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+
+  <%= f.label :sets %>
+  <%= f.text_field :sets %>
+
+  <%= f.label :reps %>
+  <%= f.text_field :reps %>
+
+  <%= f.submit %>
+<% end %>
