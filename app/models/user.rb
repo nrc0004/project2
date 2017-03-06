@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :programs
-  has_one :profile
+  has_one :profile, dependent: :destroy
 
   # after_initialize :create_profile
   #   def create_profile
