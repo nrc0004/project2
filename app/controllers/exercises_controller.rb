@@ -1,7 +1,7 @@
 class ExercisesController < ApplicationController
 
   def index
-    @exercises= Exercises.all
+    @exercises= Exercises.all   # AM: Model name needs to be singular
   end
 
   def show
@@ -30,7 +30,7 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.find(params[:id])
     @exercise.update(exercise_params)
 
-    redirect_to program_exercise_url
+    redirect_to program_exercise_url  # AM: Does this work? I think you need to pass in the specific exercise you want to redirect to.
   end
 
   def destroy
@@ -43,6 +43,6 @@ class ExercisesController < ApplicationController
 
   private
   def exercise_params
-    params.require(:exercise).permit(:name, :weight, :reps, :sets, :photo_url, :photo_url, :photo_url)
+    params.require(:exercise).permit(:name, :weight, :reps, :sets, :photo_url, :photo_url, :photo_url)  # AM: Looks like you list `photo_url` three times here.
   end
 end

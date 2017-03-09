@@ -4,12 +4,12 @@ class ProgramsController < ApplicationController
   end
 
   def homepage
-    @user= current_user
+    @user= current_user   # You could just reference `current_user` in your view instead of defining a separate `@user` variable.
     @profile = @user.profile
   end
 
   def index
-    
+
     @programs = Program.all
   end
 
