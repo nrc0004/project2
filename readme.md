@@ -1,3 +1,6 @@
+<!-- AM: For future projects you should not fork the official project repo. Instead, make one from scratch. -->
+<!-- AM: Also, where's your readme?! -->
+
 # README
 
 This README would normally document whatever steps are necessary to get the
